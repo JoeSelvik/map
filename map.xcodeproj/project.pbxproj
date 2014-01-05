@@ -21,6 +21,7 @@
 		88C84B1D1879D81700251454 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C84AFF1879D81700251454 /* UIKit.framework */; };
 		88C84B251879D81700251454 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 88C84B231879D81700251454 /* InfoPlist.strings */; };
 		88C84B271879D81700251454 /* mapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C84B261879D81700251454 /* mapTests.m */; };
+		88C84B331879E27F00251454 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88C84B321879E27F00251454 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		88C84B221879D81700251454 /* mapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mapTests-Info.plist"; sourceTree = "<group>"; };
 		88C84B241879D81700251454 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		88C84B261879D81700251454 /* mapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mapTests.m; sourceTree = "<group>"; };
+		88C84B321879E27F00251454 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C84B331879E27F00251454 /* MapKit.framework in Frameworks */,
 				88C84AFE1879D81700251454 /* CoreGraphics.framework in Frameworks */,
 				88C84B001879D81700251454 /* UIKit.framework in Frameworks */,
 				88C84AFC1879D81700251454 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		88C84AFA1879D81700251454 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88C84B321879E27F00251454 /* MapKit.framework */,
 				88C84AFB1879D81700251454 /* Foundation.framework */,
 				88C84AFD1879D81700251454 /* CoreGraphics.framework */,
 				88C84AFF1879D81700251454 /* UIKit.framework */,
@@ -461,6 +465,7 @@
 				88C84B2C1879D81700251454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88C84B2D1879D81700251454 /* Build configuration list for PBXNativeTarget "mapTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +474,7 @@
 				88C84B2F1879D81700251454 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

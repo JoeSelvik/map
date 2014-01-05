@@ -11,7 +11,9 @@
 
 @interface XYZViewController : UIViewController <MKMapViewDelegate>
 
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property
+
+(strong, nonatomic) IBOutlet MKMapView *mapView;
 - (IBAction)zoomIn:(id)sender;
 - (IBAction)changeMapType:(id)sender;
 

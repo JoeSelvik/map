@@ -9,14 +9,14 @@
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="XYZViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2iM-Ye-ZAg"/>
-                        <viewControllerLayoutGuide type="bottom" id="fex-aD-yLF"/>
+                        <viewControllerLayoutGuide type="top" id="OFS-yj-A3V"/>
+                        <viewControllerLayoutGuide type="bottom" id="j2s-N0-RIb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3t-nj-w0s">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3t-nj-w0s">
                                 <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -32,21 +32,12 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XN9-ko-54g">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XN9-ko-54g">
                                 <rect key="frame" x="0.0" y="63" width="320" height="461"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="XN9-ko-54g" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="62G-7r-mvY"/>
-                            <constraint firstItem="XN9-ko-54g" firstAttribute="leading" secondItem="K3t-nj-w0s" secondAttribute="leading" id="GlD-xG-bPn"/>
-                            <constraint firstAttribute="trailing" secondItem="XN9-ko-54g" secondAttribute="trailing" id="XrI-k8-8gf"/>
-                            <constraint firstItem="K3t-nj-w0s" firstAttribute="top" secondItem="XN9-ko-54g" secondAttribute="bottom" id="bSo-ZV-0aA"/>
-                            <constraint firstAttribute="bottom" secondItem="K3t-nj-w0s" secondAttribute="bottom" id="drd-i9-ccg"/>
-                            <constraint firstItem="XN9-ko-54g" firstAttribute="trailing" secondItem="K3t-nj-w0s" secondAttribute="trailing" id="gmf-Ie-Lrt"/>
-                            <constraint firstItem="XN9-ko-54g" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="63" id="hA1-zg-Dot"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cdU-fU-ElU"/>
                     <connections>
