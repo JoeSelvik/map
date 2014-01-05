@@ -20,6 +20,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     _mapView.showsUserLocation = YES;
+    
+    // Declare this class as the mapView's delegate
+    _mapView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,5 +47,8 @@
         _mapView.mapType = MKMapTypeStandard;
 }
 
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    _mapView.centerCoordinate = userLocation.location.coordinate;
+}
 
 @end
