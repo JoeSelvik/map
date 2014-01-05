@@ -1,21 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="i0G-bw-ctu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3746"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="XYZViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2iM-Ye-ZAg"/>
+                        <viewControllerLayoutGuide type="bottom" id="fex-aD-yLF"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K3t-nj-w0s">
+                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Zoom" id="QPk-lN-Y00">
+                                        <connections>
+                                            <action selector="zoomIn:" destination="vXZ-lx-hvc" id="oaI-Co-hLe"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Type" id="M8q-L1-Gv9">
+                                        <connections>
+                                            <action selector="changeMapType:" destination="vXZ-lx-hvc" id="PnO-yh-bFo"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="XN9-ko-54g">
+                                <rect key="frame" x="0.0" y="63" width="320" height="461"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XN9-ko-54g" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="62G-7r-mvY"/>
+                            <constraint firstItem="XN9-ko-54g" firstAttribute="leading" secondItem="K3t-nj-w0s" secondAttribute="leading" id="GlD-xG-bPn"/>
+                            <constraint firstAttribute="trailing" secondItem="XN9-ko-54g" secondAttribute="trailing" id="XrI-k8-8gf"/>
+                            <constraint firstItem="K3t-nj-w0s" firstAttribute="top" secondItem="XN9-ko-54g" secondAttribute="bottom" id="bSo-ZV-0aA"/>
+                            <constraint firstAttribute="bottom" secondItem="K3t-nj-w0s" secondAttribute="bottom" id="drd-i9-ccg"/>
+                            <constraint firstItem="XN9-ko-54g" firstAttribute="trailing" secondItem="K3t-nj-w0s" secondAttribute="trailing" id="gmf-Ie-Lrt"/>
+                            <constraint firstItem="XN9-ko-54g" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="63" id="hA1-zg-Dot"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="cdU-fU-ElU"/>
+                    <connections>
+                        <outlet property="mapView" destination="XN9-ko-54g" id="jpX-QG-VQs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="924" y="147"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OCg-0o-pZQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i0G-bw-ctu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2vh-iU-rXo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="0m9-b4-GKo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byb-fQ-Pp8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="147"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

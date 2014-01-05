@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface XYZViewController : UIViewController
+@interface XYZViewController : UIViewController <MKMapViewDelegate>
+
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)zoomIn:(id)sender;
+- (IBAction)changeMapType:(id)sender;
 
 @end
